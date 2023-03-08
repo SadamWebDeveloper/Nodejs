@@ -20,12 +20,35 @@ app.use(express.static("public"));
 const handlebars = exphbs.create({extname:".hbs"});
 app.engine('hbs',handlebars.engine);
 app.set("view engine","hbs");
+/*
+the below code is for small project here we are going to practice in real project we include it in comtroller file
+// mySQL connection 
+const con = mysql.createPool({
+    connectionLimit :10,
+    host : process.env.DB_HOST,
+    database : process.env.DB_NAME,
+    user : process.env.DB_USER,
+    password : process.env.DB_PASS
+});
 
+// check database connection 
+con.getConnection((err,connection)=>{
+    if(err) throw err
+    console.log("DB connection successfully");
+});
+*/
+
+
+/*
 // creating Router
 app.get('/',(req,res)=>{
     res.render("home");
 });
+*/
 
+// declearing route to app.json
+const routes=require("./server/routes/customers");
+app.use('/',routes);
 
 // listen port
 app.listen(port,()=>{

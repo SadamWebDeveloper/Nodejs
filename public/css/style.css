@@ -1,11 +1,11 @@
 
-@font-face {
+/* @font-face {
         font-family: 'robotoregular';
         src: url(../fonts/roboto-regular-webfont.woff) format('woff');
         font-weight: normal;
         font-style: normal;
     
-}
+} */
 
 .headerStyle{
         background-color: rgb(88, 212, 231);
@@ -147,16 +147,45 @@
             display: none;
         }
     }
+    table{
+        margin-left: 6% !important;
+        margin-top: 3% !important;
+        border: rgb(88, 212, 231) !important;
+    }
+    .iconsize{
+        font-size: 25px !important;
+        padding-left: 5px !important;
+        cursor: pointer !important;
+    }
+   
     #myTable.minimize {
         width: 76%;
-        margin-left: 332px;
+        margin-left: 332px !important;
         transition: all 0.3s ease-in-out;
+        border: deepskyblue !important;
     }
     
     
     :root {
         --bg-primary: #cfdaf2;
-        --bg-secondary: #52575d;
-        --bg-active: #fddb3a;
-        --cl-text: #f6f4e6;
+        --bg-secondary: #7aa9e2;
+        --bg-active: #1c93dd;
+        --cl-text: #3d4033;
+    }
+    p{
+        margin-top: 1% !important;
+        text-align: right !important;
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: #2d96d7;
+        color: white;
+        /* text-align: center; */
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        float: right;
+        
+          
     }
