@@ -2,7 +2,7 @@ const mysql = require("mysql");
 
 
 const con = mysql.createPool({
-    connectionLimit :10,
+    connectionLimit :3,
     host : process.env.DB_HOST,
     database : process.env.DB_NAME,
     user : process.env.DB_USER,
@@ -39,7 +39,7 @@ exports.view=(req,res)=>{
         if(err) throw err
         const {name,age,address,phone}=req.body;
       
-        connection.query("insert into details (id,name,age,address,phone) values (?,?,?,?)",[name,age,address,phone],(err,rows)=>{
+        connection.query("insert into details (name,age,address,phone) values (?,?,?,?)",[name,age,address,phone],(err,rows)=>{
         connection.release();
         if(!err){
           

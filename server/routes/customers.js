@@ -6,9 +6,10 @@ const customersController = require('../controllers/customersController');
 router.get('/',customersController.view);
 
 
-
+ 
 router.get('/addUser',customersController.addUser);
 router.post('/addUser',customersController.save);
+//  router.post('/addUser',()=> { console.log("hiiiiiiiii");});
 
 // router.get('',(req,res)=>{
 //     res.render("home");

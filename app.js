@@ -5,7 +5,7 @@ const mysql = require("mysql");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 3000 ;
+const port = process.env.PORT || 4000 ;
 
 //big topic need to understand
 app.use(bodyParser.urlencoded({
@@ -52,5 +52,5 @@ app.use('/',routes);
 
 // listen port
 app.listen(port,()=>{
-    console.log('checking port :'+port);
+    console.log('checking listen port :'+port);
 });
